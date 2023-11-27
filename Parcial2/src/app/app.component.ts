@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { ConferenciaModule } from './conferencia/conferencia.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ConferenciaService } from './conferencia/conferencia.service';
 
 @Component({
+  standalone:true,
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, ConferenciaModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [ConferenciaModule, HttpClientModule],
+  providers:[ConferenciaModule, ConferenciaService]
 })
 export class AppComponent {
   title = 'Parcial2';

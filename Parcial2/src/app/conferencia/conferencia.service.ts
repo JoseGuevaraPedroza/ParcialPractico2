@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ConferenciaService {
 
-  url:string = "https://gist.githubusercontent.com/k-garces/d2ea7b6ba0a5502a7856f10b1cd1e032/raw/47bcf9b71199defa5539bb8122ae2da01e721afe/conferences";
+  private url:string = "https://gist.githubusercontent.com/k-garces/d2ea7b6ba0a5502a7856f10b1cd1e032/raw/47bcf9b71199defa5539bb8122ae2da01e721afe/conferences.json";
 
   constructor(private http: HttpClient) {}
 
@@ -16,4 +16,5 @@ export class ConferenciaService {
   {
     return this.http.get<Conferencia[]>(this.url);
   }
+ 
 }

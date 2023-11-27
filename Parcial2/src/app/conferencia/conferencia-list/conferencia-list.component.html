@@ -1,1 +1,25 @@
 <p>conferencia-list works!</p>
+
+<div class="container-fluid">
+    <table class="table table-dark">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Head</th>
+                <th>Starts</th>
+                <th>Ends</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let conferencia of conferencias">
+                <td>{{conferencia.id}}</td>
+                <td>{{conferencia.name}}</td>
+                <td>{{conferencia.starts}}</td>
+                <td>{{conferencia.ends}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container-fluid">
+        Conferencias por venir: {{conferenciasFuturas}}
+    </div>
+</div>

@@ -8,7 +8,7 @@ import { ConferenciaListComponent } from './conferencia-list/conferencia-list.co
   declarations: [],
   imports: [
     CommonModule,
-    ConferenciaListComponent
+    ConferenciaListComponent,
   ],
   exports: [ConferenciaListComponent]
 })
